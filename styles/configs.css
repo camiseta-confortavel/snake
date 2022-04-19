@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --background: #222;
+    --foreground: #AAA;
+    --info: #FFF;
+    --highlighted: #050;
+
+    --pad_size: 1rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Press start 2p', cursive;
+    color: var(--foreground);
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+}
+
+main {
+    row-gap: 2rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: var(--highlighted);
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+canvas {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    border: 1px solid darkgreen;
+}
+
+@media only screen and (orientation: portrait) and (pointer: coarse) and (hover: none) {
+    :root {
+        font-size: 10vh;
+    }
+
+    section.mobile {
+        display: grid;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    canvas {
+        margin-top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media only screen and (orientation: landscape) and (pointer: coarse) and (hover: none) {
+    :root {
+        font-size: 10vw;
+    }
+
+    section.mobile {
+        display: grid;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    canvas {
+        margin-left: 0;
+        top: 0;
+        bottom: 0;
+    }
+}

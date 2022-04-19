@@ -1,0 +1,88 @@
+@import 'configs.css';
+
+.rangeFather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rangeFather input[type='range'] {
+    appearance: none;
+    height: 2px;
+    direction: rtl;
+    background: var(--highlighted);
+}
+
+#buttonPlay {
+    border: none;
+    align-self: center;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    background: transparent;
+    color: var(--highlighted);
+}
+
+.info {
+    font-size: .5em;
+    line-height: 2em;
+    row-gap: 1em;
+    color: var(--info);
+}
+
+.mobile {
+    width: max-content;  height: max-content;
+    margin: auto;
+    position: absolute;
+    grid-template-columns: repeat(3, auto);  grid-template-rows: repeat(2, auto);
+    display: none;
+}
+
+.pad {
+    width: var(--pad_size);  height: var(--pad_size);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-shadow: inset 0px 0px 10px var(--highlighted);
+}
+
+.mobile .pad:nth-of-type(1) {
+    grid-area: 1/2/2/3;
+    transform: rotate(-90deg);
+}
+
+.mobile .pad:nth-of-type(2) {
+    grid-area: 2/1/3/2;
+    transform: rotate(180deg);
+}
+
+.mobile .pad:nth-of-type(3) {
+    grid-area: 2/2/3/3;
+    transform: rotate(90deg);
+}
+
+.mobile .pad:nth-of-type(4) {
+    grid-area: 2/3/3/4;
+}
+
+.gameOver {
+    width: 100%;    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 0;
+    row-gap: 1em;
+    background: black;
+    display: none;
+}
+
+.gameOver input[type='button'] {
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--highlighted);
+    color: lime;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/ico/snake.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/index.css">
+    <title>Snake Game</title>
+</head>
+<body>
+    <main class="menu">
+        <h1>Snake Game</h1>
+        <p>Snake color:<input type="color" id="snakeColor"></p>
+        <p>Food color:<input type="color" id="foodColor"></p>
+        <p class="rangeFather">Speed: <input type="range" id="snakeSpeed" min="50" max="150" step="50"></p>
+        <input type="button" value="Play" id="buttonPlay">
+        <p class="info">PC Controls: [W, A, S, D] <br> Mobile Controls: [Arrows]</p>
+    </main>
+    <canvas width="500" height="500"></canvas>
+    <section class="mobile">
+        <figure class="pad" value="w"><img src="../images/icons/arrow.svg" alt="seta direcional"></figure>
+        <figure class="pad" value="a"><img src="../images/icons/arrow.svg" alt="seta direcional"></figure>
+        <figure class="pad" value="s"><img src="../images/icons/arrow.svg" alt="seta direcional"></figure>
+        <figure class="pad" value="d"><img src="../images/icons/arrow.svg" alt="seta direcional"></figure>
+    </section>
+
+    <section class="gameOver">
+        <h2>Fim De Jogo</h2>
+        <p class="panelPoints"></p>
+        <input type="button" value="Jogar novamente" id="buttonRestart">
+    </section>
+    <script src="../codes/index.js"></script>
+</body>
+</html>
